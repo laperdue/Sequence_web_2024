@@ -1,3 +1,6 @@
+<!-- Declare miams en appelant loadMiams() -->
+{% set miams = loadMiams() %}
+
 <!doctype html>
 <html>
   <head>
@@ -7,9 +10,8 @@
     <script type="text/javascript" src="{{ url_for('static',filename='script.js')}}"></script>
   </head>
   <body>
-    <!--  -->
     <header>
-        <h1>Demo Application Web</h1>
+        <h1>5 par jour</h1>
     </header>
     <main>
         <h2>Liste des aliments</h2>
@@ -20,120 +22,15 @@
                 <th>Debut</th>
                 <th>Fin</th>
             </tr>
+            <!-- Utilises la variable miam pour generer les éléments du tableau -->
+            {% for miam in miams %}
             <tr>
-                <td>Pomme</td>
-                <td>Fruit</td>
-                <td>Automne</td>
-                <td>Hiver</td>
+                <td>{{ miam.nom }}</td>
+                <td>{{ miam.type }}</td>
+                <td>{{ miam.debut }}</td>
+                <td>{{ miam.fin }}</td>
             </tr>
-            <tr>
-                <td>Carotte</td>
-                <td>Légume</td>
-                <td>Printemps</td>
-                <td>Automne</td>
-            </tr>
-            <tr>
-                <td>Banane</td>
-                <td>Fruit</td>
-                <td>Été</td>
-                <td>Automne</td>
-            </tr>
-            <tr>
-                <td>Tomate</td>
-                <td>Légume</td>
-                <td>Été</td>
-                <td>Automne</td>
-            </tr>
-            <tr>
-                <td>Fraise</td>
-                <td>Fruit</td>
-                <td>Printemps</td>
-                <td>Été</td>
-            </tr>
-            <tr>
-                <td>Oignon</td>
-                <td>Légume</td>
-                <td>Printemps</td>
-                <td>Automne</td>
-            </tr>
-            <tr>
-                <td>Ananas</td>
-                <td>Fruit</td>
-                <td>Été</td>
-                <td>Automne</td>
-            </tr>
-            <tr>
-                <td>Poivron</td>
-                <td>Légume</td>
-                <td>Été</td>
-                <td>Automne</td>
-            </tr>
-            <tr>
-                <td>Citron</td>
-                <td>Fruit</td>
-                <td>Hiver</td>
-                <td>Printemps</td>
-            </tr>
-            <tr>
-                <td>Patate</td>
-                <td>Légume</td>
-                <td>Automne</td>
-                <td>Hiver</td>
-            </tr>
-            <tr>
-                <td>Orange</td>
-                <td>Fruit</td>
-                <td>Hiver</td>
-                <td>Printemps</td>
-            </tr>
-            <tr>
-                <td>Laitue</td>
-                <td>Légume</td>
-                <td>Printemps</td>
-                <td>Automne</td>
-            </tr>
-            <tr>
-                <td>Poire</td>
-                <td>Fruit</td>
-                <td>Automne</td>
-                <td>Hiver</td>
-            </tr>
-            <tr>
-                <td>Concombre</td>
-                <td>Légume</td>
-                <td>Été</td>
-                <td>Automne</td>
-            </tr>
-            <tr>
-                <td>Melon</td>
-                <td>Fruit</td>
-                <td>Été</td>
-                <td>Automne</td>
-            </tr>
-            <tr>
-                <td>Aubergine</td>
-                <td>Légume</td>
-                <td>Été</td>
-                <td>Automne</td>
-            </tr>
-            <tr>
-                <td>Cerise</td>
-                <td>Fruit</td>
-                <td>Printemps</td>
-                <td>Été</td>
-            </tr>
-            <tr>
-                <td>Chou-fleur</td>
-                <td>Légume</td>
-                <td>Automne</td>
-                <td>Hiver</td>
-            </tr>
-            <tr>
-                <td>Raisin</td>
-                <td>Fruit</td>
-                <td>Automne</td>
-                <td>Hiver</td>
-            </tr>
+            {% endfor %}
         </table>
     </main>
     <footer>

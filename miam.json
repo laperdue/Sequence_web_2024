@@ -1,0 +1,118 @@
+{
+    "fruits_et_legumes": [
+        {
+            "nom": "Pomme",
+            "type": "Fruit",
+            "debut": "Automne",
+            "fin": "Hiver"
+        },
+        {
+            "nom": "Carotte",
+            "type": "Légume",
+            "debut": "Printemps",
+            "fin": "Automne"
+        },
+        {
+            "nom": "Banane",
+            "type": "Fruit",
+            "debut": "Été",
+            "fin": "Automne"
+        },
+        {
+            "nom": "Tomate",
+            "type": "Légume",
+            "debut": "Été",
+            "fin": "Automne"
+        },
+        {
+            "nom": "Fraise",
+            "type": "Fruit",
+            "debut": "Printemps",
+            "fin": "Été"
+        },
+        {
+            "nom": "Oignon",
+            "type": "Légume",
+            "debut": "Printemps",
+            "fin": "Automne"
+        },
+        {
+            "nom": "Ananas",
+            "type": "Fruit",
+            "debut": "Été",
+            "fin": "Automne"
+        },
+        {
+            "nom": "Poivron",
+            "type": "Légume",
+            "debut": "Été",
+            "fin": "Automne"
+        },
+        {
+            "nom": "Citron",
+            "type": "Fruit",
+            "debut": "Hiver",
+            "fin": "Printemps"
+        },
+        {
+            "nom": "Patate",
+            "type": "Légume",
+            "debut": "Automne",
+            "fin": "Hiver"
+        },
+        {
+            "nom": "Orange",
+            "type": "Fruit",
+            "debut": "Hiver",
+            "fin": "Printemps"
+        },
+        {
+            "nom": "Laitue",
+            "type": "Légume",
+            "debut": "Printemps",
+            "fin": "Automne"
+        },
+        {
+            "nom": "Poire",
+            "type": "Fruit",
+            "debut": "Automne",
+            "fin": "Hiver"
+        },
+        {
+            "nom": "Concombre",
+            "type": "Légume",
+            "debut": "Été",
+            "fin": "Automne"
+        },
+        {
+            "nom": "Melon",
+            "type": "Fruit",
+            "debut": "Été",
+            "fin": "Automne"
+        },
+        {
+            "nom": "Aubergine",
+            "type": "Légume",
+            "debut": "Été",
+            "fin": "Automne"
+        },
+        {
+            "nom": "Cerise",
+            "type": "Fruit",
+            "debut": "Printemps",
+            "fin": "Été"
+        },
+        {
+            "nom": "Chou-fleur",
+            "type": "Légume",
+            "debut": "Automne",
+            "fin": "Hiver"
+        },
+        {
+            "nom": "Raisin",
+            "type": "Fruit",
+            "debut": "Automne",
+            "fin": "Hiver"
+        }
+    ]
+}
