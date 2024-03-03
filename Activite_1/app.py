@@ -11,8 +11,31 @@ def accueil():
         miams = loadMiams()
         return render_template("index.html", miams = miams)
     
+@app.route('/<season>', methods = ["GET"])
+def season(season):
+    if request.method == "GET":
+        miams = loadMiams(season)
+        return render_template("index.html", miams = miams)
+    
 
-def loadMiams():
+def loadMiams(season = None):
     file = open("miam.json", "r", encoding="utf-8")
-    load = json.loads(file.read())
-    return load['miams']
+    miams = json.loads(file.read())['miams']
+    file.close()
+    # Filter by season
+    if season:
+        filteredMiams = []
+        seasons = ["Hiver", "Printemps", "Été", "Automne"]
+        for miam in miams:
+            print(miam)
+            indexStart = seasons.index(miam['debut']) 
+            indexEnd = seasons.index(miam['fin'])
+            indexSeason = seasons.index(season)
+            if indexStart < indexEnd:
+                if indexStart <= indexSeason and indexSeason <= indexEnd:
+                    filteredMiams.append(miam)
+            else:
+                if indexStart <= indexSeason or indexSeason <= indexEnd:
+                    filteredMiams.append(miam)
+        miams = filteredMiams
+    return miams
