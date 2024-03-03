@@ -1,0 +1,1 @@
+alert('nique sa mere le javascript')
