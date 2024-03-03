@@ -8,10 +8,11 @@ app = Flask(__name__)
 @app.route("/", methods = ["GET"])
 def accueil():
     if request.method == "GET":
-        return render_template("accueil.html")
+        miams = loadMiams()
+        return render_template("index.html", miams = miams)
     
-@app.route("/miam.json", methods = ["GET"])
-def miam():
-    if request.method == "GET":
-        file = open("miam.json", "r")
-        return file.read()
+
+def loadMiams():
+    file = open("miam.json", "r")
+    load = json.loads(file.read())
+    return load['miams']
