@@ -13,6 +13,6 @@ def accueil():
     
 
 def loadMiams():
-    file = open("miam.json", "r")
+    file = open("miam.json", "r", encoding="utf-8")
     load = json.loads(file.read())
     return load['miams']
